@@ -1,6 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Company:</strong>
+  <%= @course.location.company.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <td><%= @course.location.name %></td>
+<p>
+
   <strong>Title:</strong>
   <%= @course.title %>
 </p>

@@ -8,15 +8,21 @@
 </head>
 <body>
 
-<div class='container'>
-  <div class='row'>
-    <div class='col-md-12'>
+<h1>Consultant Firm</h1>
+
+<div>
+  <nav class='nav-format'>
+    <%= link_to 'COMPANIES', companies_path %>
+    <%= link_to 'LOCATIONS', locations_path %>
+    <%= link_to 'EMPLOYEES', employees_path %>
+    <%= link_to 'COURSES', courses_path %>
+  </nav>
+</div>
+
 
       <%= yield %>
 
-    </div>
-  </div>
-</div>
+
 
 </body>
 </html>
