@@ -11,6 +11,10 @@
     </div>
   <% end %>
 
+  <div>
+    <%= f.select :company_id, options_for_select(company_collection) %>
+  </div>
+
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>

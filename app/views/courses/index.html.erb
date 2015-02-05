@@ -5,6 +5,8 @@
 <table>
   <thead>
     <tr>
+      <th>Company</th>
+      <th>Location</th>
       <th>Title</th>
       <th>Reqs</th>
       <th>Enrollment cap</th>
@@ -12,9 +14,14 @@
     </tr>
   </thead>
 
+
+
+
   <tbody>
     <% @courses.each do |course| %>
       <tr>
+        <td><%= course.location.company.name %></td>
+        <td><%= course.location.name %></td>
         <td><%= course.title %></td>
         <td><%= course.reqs %></td>
         <td><%= course.enrollment_cap %></td>
