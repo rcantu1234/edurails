@@ -5,10 +5,11 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.2/cosmo/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-<h1>Consultant Firm</h1>
+<h1 class='header-format'>Consultant Firm</h1>
 
 <div>
   <nav class='nav-format'>
@@ -19,10 +20,15 @@
   </nav>
 </div>
 
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-12'>
 
       <%= yield %>
 
-
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
