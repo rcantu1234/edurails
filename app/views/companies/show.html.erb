@@ -1,30 +1,46 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @company.name %>
-</p>
+<table class='table table-striped'>
+<thead>
+  <tr>
+    <th>Company</th>
+  </tr>
+  </thead>
 
-<p>
-  <strong>Locations:</strong>
-  <% @company.locations.each do |location| %>
-   <%= location.name %>
-  <% end %>
-</p>
+  <tbody>
+    <% @companies.each do |company| %>
+      <tr><td><%= company.name %></td></tr>
+    <% end %>
+  </tbody>
+</table>
 
-    <p>
-      <strong>Courses:</strong>
-        <% @company.courses(@location).each do |course| %>
-         <%= course.title %>
-        <% end %>
-    </p>
+<table class='table table-striped'>
+<thead>
+  <tr>
+    <th>Location</th>
+  </tr>
+  </thead>
 
-<p>
-  <strong>Employees:</strong>
-  <% @company.employees.each do |employee| %>
-    <%= employee.name %>
-  <% end %>
-</p>
+  <tbody>
+    <% @company.locations.each do |location| %>
+      <tr><td><%= location.name %></td></tr>
+    <% end %>
+  </tbody>
+</table>
+
+<table class='table table-striped'>
+<thead>
+  <tr>
+    <th>Courses</th>
+  </tr>
+  </thead>
+
+  <tbody>
+    <% @company.courses(@location).each do |course| %>
+      <tr><td><%= course.title %></td></tr>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>

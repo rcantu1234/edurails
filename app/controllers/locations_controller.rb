@@ -5,11 +5,14 @@ class LocationsController < ApplicationController
   # GET /locations.json
   def index
     @locations = Location.all
+    @courses = Course.all
   end
 
   # GET /locations/1
   # GET /locations/1.json
   def show
+    @locations = Location.all
+   # @course = Course.find(params[:course_id])
   end
 
   # GET /locations/new
@@ -69,6 +72,6 @@ class LocationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def location_params
-      params.require(:location).permit(:name, :company_id)
+      params.require(:location).permit(:name, :company_id, :title)
     end
 end

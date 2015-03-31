@@ -5,6 +5,9 @@ class CompaniesController < ApplicationController
   # GET /companies.json
   def index
     @companies = Company.all
+    @locations = Location.all
+    @courses = Course.all
+    @employees = Employee.all
   end
 
   # GET /companies/1

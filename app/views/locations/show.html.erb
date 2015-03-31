@@ -1,14 +1,40 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Company:</strong>
-  <%= @location.company.name %>
-</p>
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th>Company</th>
+    </tr>
+  </thead>
 
-<p>
-  <strong>Name:</strong>
+  <tbody>
+    <% @locations.each do |location| %>
+      <tr>
+        <td><%= location.company.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<!-- <p>
+  <strong>Location:</strong>
   <%= @location.name %>
-</p>
+</p> -->
+
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th>Courses</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @location.courses.each do |course| %>
+      <tr>
+        <td><%= course.title %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to 'Edit', edit_location_path(@location) %> |
 <%= link_to 'Back', locations_path %>
