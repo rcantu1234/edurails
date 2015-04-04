@@ -13,10 +13,7 @@ class CompaniesController < ApplicationController
   # GET /companies/1
   # GET /companies/1.json
   def show
-    @companies = Company.all
-    @employees = Employee.all
-    @locations = Location.new
-    @courses = Course.new
+    @company = Company.find(params[:id])
   end
 
   # GET /companies/new
@@ -76,6 +73,6 @@ class CompaniesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def company_params
-      params.require(:company).permit(:name)
+      params.require(:company).permit(:name, :employee_id)
     end
 end

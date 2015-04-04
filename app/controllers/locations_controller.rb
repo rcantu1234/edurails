@@ -11,8 +11,9 @@ class LocationsController < ApplicationController
   # GET /locations/1
   # GET /locations/1.json
   def show
-    @locations = Location.all
-   # @course = Course.find(params[:course_id])
+    @location = Location.find(params[:id])
+    #@course = Course.find(params[:course_id])
+   # @courses = Course.all
   end
 
   # GET /locations/new

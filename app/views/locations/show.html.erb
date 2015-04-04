@@ -8,17 +8,13 @@
   </thead>
 
   <tbody>
-    <% @locations.each do |location| %>
+
       <tr>
-        <td><%= location.company.name %></td>
+        <td><%= @location.company.name %></td>
       </tr>
-    <% end %>
+
   </tbody>
 </table>
-<!-- <p>
-  <strong>Location:</strong>
-  <%= @location.name %>
-</p> -->
 
 <table class='table table-striped'>
   <thead>
